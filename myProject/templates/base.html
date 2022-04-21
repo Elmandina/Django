@@ -1,0 +1,18 @@
+
+{% load static %}
+
+<html lang="en">
+    <head>
+        <title>Django</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+       
+    </head>
+    <body style="background-image: url( '{% static "images\chow1_1.jpg" %}' ); background-repeat: no-repeat;  background-size: 100%; background-position: top;">
+        
+        {% block body %}
+        
+
+        {% endblock body%}
+
+       
+    </body>

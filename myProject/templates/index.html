@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+    <body style="background-image: url( '{% static "images\chow1_1.jpg" %}' ); background-repeat: no-repeat;  background-size: 100%; background-position: top;" >
+        {% block body%} 
+
+        <h1>Hi I'm Elma!</h1><br/>
+        <h3>This is a LOG-IN webapp using Django :)</h3><br/>
+
+        <form id="form">
+            <h2>Login here</h2>
+            <input type="text" name="fname" placeholder="Enter Your First Name"><br/>
+            <input type="text" name="lname" placeholder="Enter Your Last Name"><br/>
+            <input type="email" name="email" placeholder="Enter Your Email"><br/>
+            <input type="password" name="psw" placeholder="Enter Your Password"><br/>
+            <input type="password" name="confpsw" placeholder="Confirm Your Password"><br/><br/>
+
+            <input type="submit" name="SUBMIT" style= "cursor: pointer; border-radius:50%;">
+
+        </form>
+        <div class="clas">
+        <p3 style="margin-left: 5%; color: #fff; font-weight: bold;">Rreth chow-chow :</p3>
+        {% for item in information%}
+            <p style="margin-left: 10%; color: #fff; font-weight: bold;">~ {{item}}  </p>
+        {% endfor %}
+
+       <br/> <p1 style="margin-left: 5%; color: #fff; font-weight: bold;">Ne pergjithesi kane ngjyre :</p1><br/><br/>
+        {% for item in ngjyrat%}
+            <p2 style="margin-left: 10%; color: #fff; font-weight: bold;">~ {{item}}</p2><br/><br/>
+        {% endfor %}
+        {% endblock body%}
+        </div>
+    </body>
